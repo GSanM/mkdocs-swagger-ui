@@ -24,7 +24,7 @@ class SwaggerUIPlugin(BasePlugin):
     config_scheme = (
         ('do_nothing', mkdocs.config.config_options.Type(str, default='')),
         ('spec_url', config_options.Type(str, default='https://petstore.swagger.io/v2/swagger.json')),
-        ('template', config_options.Type(str, default='swagger.md.tmpl')),
+        ('template', config_options.Type(str, default='tmpl/swagger.md.tmpl')),
         ('outfile', config_options.Type(str, default='docs/swagger.md'))
     )
 
