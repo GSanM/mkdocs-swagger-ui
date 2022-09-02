@@ -58,7 +58,6 @@ class SwaggerUIPlugin(BasePlugin):
             contents = self.generate_page_contents()
             return contents
 
-    '''
     def on_pre_build(self, config):
         outfile  = self.config['outfile']
         contents = self.generate_page_contents()
@@ -66,4 +65,3 @@ class SwaggerUIPlugin(BasePlugin):
         with open(dest, "w") as fh:
             fh.write(contents)
         return config
-    '''
