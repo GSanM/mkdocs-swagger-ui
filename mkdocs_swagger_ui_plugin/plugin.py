@@ -13,11 +13,7 @@ import yaml
 import json
 import markdown
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-
-from jinja2.utils import markupsafe 
-markupsafe.Markup()
-
-Markup('')
+from jinja2.utils import markupsafe
     
 import requests
 from urllib.parse import urlparse
@@ -47,7 +43,7 @@ class SwaggerUIPlugin(BasePlugin):
             autoescape=select_autoescape(['html', 'xml'])
         )
         md = markdown.Markdown()
-        env.filters['markdown'] = lambda text: Markup(md.convert(text))
+        env.filters['markdown'] = lambda text: markupsafe.Markup(md.convert(text))
   
         template = env.get_template( tmpl_url )
         tmpl_out = template.render( spec=spec_url )
