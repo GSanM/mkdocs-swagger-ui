@@ -15,7 +15,6 @@ import markdown
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from jinja2.utils import markupsafe
     
-import requests
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 from urllib.error import URLError
